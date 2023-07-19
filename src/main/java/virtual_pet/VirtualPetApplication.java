@@ -1,5 +1,6 @@
 package virtual_pet;
 
+import java.util.Map;
 import java.util.Scanner;
 
 public class VirtualPetApplication {
@@ -12,8 +13,34 @@ public class VirtualPetApplication {
 
         VirtualPet rocky = new VirtualPet("Rocky");
 
+        VirtualPetShelter shelter = new VirtualPetShelter();
+        shelter.addDogs(rocky);
+        
+
+
         System.out.println("Welcome to Virtual Pet. Say Hello to " + rocky.getPetName());
         do {
+
+            // for(Map.Entry<String,String> entry : cartersPlayHouse.entrySet()) {
+            //     // VirtualPet studentName = entry.getKey();
+
+            // }
+
+            // System.out.println("Name |Hunger |Thirst |Boredom")
+            // System.out.println("--------|-------|-------|-------")
+            // System.out.println("Joey |83 |34 |23")
+            // System.out.println("Johnny |69 |49 |2")
+            // System.out.println("Dee Dee |39 |18 |88")
+            // System.out.println("Tommy |59 |19 |37")
+
+            // System.out.println("Name |Hunger |Thirst |Boredom")
+            // System.out.println("--------|-------|-------|-------")
+            // System.out.println("Joey |83 |34 |23")
+            // System.out.println("Johnny |69 |49 |2")
+            // System.out.println("Dee Dee |39 |18 |88")
+            // System.out.println("Tommy |59 |19 |37")
+
+
 
             System.out.println("");
             System.out.println("Here is " + rocky.getPetName() + "s'" + " status");
@@ -70,7 +97,7 @@ public class VirtualPetApplication {
             System.out.println("(Y8P  ,/|||||/  |");
             System.out.println("   `-'_----    /");
             System.out.println("      /`-._.-'/");
-            System.out.println("      `-.__.-' RoCkY");
+            System.out.println("      `-.__.-'" + rocky.getPetName());
 
         } else if (rocky.getThirstPct() >= 100) {
             System.out.println("HURRY! " + rocky.getPetName() + " is about to die of thirst!");
@@ -83,7 +110,7 @@ public class VirtualPetApplication {
             System.out.println("(Y8P  ,/|||||/  |");
             System.out.println("   `-'_----    /");
             System.out.println("      /`-._.-'/");
-            System.out.println("      `-.__.-' RoCkY");
+            System.out.println("      `-.__.-'" + rocky.getPetName());
 
         } else if (rocky.getBoredomPct() >= 100) {
             System.out.println("HURRY! " + rocky.getPetName() + " is about to die of boredom!");
@@ -96,7 +123,7 @@ public class VirtualPetApplication {
             System.out.println("(Y8P  ,/|||||/  |");
             System.out.println("   `-'_----    /");
             System.out.println("      /`-._.-'/");
-            System.out.println("      `-.__.-' RoCkY");
+            System.out.println("      `-.__.-'" + rocky.getPetName());
         }
 
         scanner.close();
